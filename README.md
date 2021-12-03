@@ -78,6 +78,21 @@ Se han creado sistemas NER empleando técnicas basadas en gramáticas lingüíst
 
 Muchos clasificadores diferentes han sido utilizados para NER usando aprendizaje de máquina. Los campos aleatorios condicionales son una elección común.
 
+Los cuatro principales enfoques aplicados en NER son:
+- Basado en reglas:
+	Estos sistemas NER se basan en reglas hechas a mano, es decir, las reglas pueden diseñarse utilizando diccionarios geográficos específicos de dominio y patrones sintáctico-léxicos. Un ejemplo es el enfoque de inferencia de reglas Brill para la entrada de voz. Este sistema genera reglas automáticamente basadas en el etiquetador de parte del discurso de Brill. En cuanto el dominio biomédico, se encuentra ProMiner, que aprovecha un diccionario de sinónimos preprocesado para identificar menciones de proteínas y genes potenciales en texto biomédico.
+	Los sistemas basados en reglas funcionan muy bien cuando el lexicón es exhaustivo. Debido a reglas específicas de dominio y diccionarios incompletos, a menudo se observan alta precisión y baja recuperación de dichos sistemas, la transferencia de estos sistemas a otros dominios, no es posible.
+- Aprendizaje no supervisado:
+	Un enfoque típico del aprendizaje no supervisado es el clustering. Dichos sistemas extraen entidades con nombre de los grupos en función de la similitud de contexto. La idea clave es que los recursos léxicos, los patrones léxicos y las estadísticas calculadas en un corpus grande, pueden usarse para inferir menciones de entidades nombradas.
+	Como ejemplo de lo anterior, podemos encontrar sistemas no supervisados para la construcción de diccionarios geográficos y con esto la resolución a la ambigüedad de la entidad nombrada. El sistema anterior combina extracción de entidad y desambiguación basadas en heurísticas simples pero altamente efectivas.
+- Aprendizaje supervisado basado en características:
+	Aplicando el aprendizaje supervisado, NER se convierte en una tarea de clasificación de múltiples clases o etiquetado de secuencias. Dadas muestras de datos anotados, las características están cuidadosamente diseñadas para representar cada ejemplo de entrenamiento. Los algoritmos de aprendizaje supervisado son usados para aprender un modelo de reconocimiento de patrones similares a partir de datos no vistos. La representación del vector de características es una abstracción sobre el texto donde una palabra está representada por uno o varios valores booleanos, numéricos o nominales. Basado en estas características, se han aplicado muchos algoritmos de aprendizaje supervisado en NER, incluidos modelos ocultos de Markov (HMM), árboles de decisión, modelos de máxima entropía, máquinas de vectores de soporte (SVM), y campos aleatorios condicionales (CRF).
+- Aprendizaje profundo:
+	El aprendizaje profundo es un campo de aprendizaje automático que se compone de múltiples capas de procesamiento, para aprender representaciones de datos con múltiples niveles de abstracción. Las principales ventajas de aplicar técnicas de aprendizaje profundo a NER son:
+	1. Se beneficia de la transformación no lineal, que genera asignaciones no lineales de entrada a salida. En comparación con los modelos lineales (Log-linear HMM y CRF de cadena lineal), los modelos de aprendizaje profundo pueden aprender características complejas e intrincadas de los datos a través de funciones de activación no lineal.
+	2. El aprendizaje profundo ahorra un esfuerzo significativo en el diseño de funciones NER. Los enfoques tradicionales basados en características, requieren una considerable cantidad de habilidades de ingeniería y experiencia en el dominio. Los modelos de aprendizaje profundo, por otro lado, son efectivos para aprender automáticamente representaciones útiles y factores subyacentes a partir de datos sin procesar.
+	3. En tercer lugar, los modelos NER neuronales profundos, se pueden entrenar en un paradigma de extremo a extremo, por descenso de gradiente. Esta propiedad nos permite diseñar sistemas NER más complejos.
+
 ## Ventajas y Desventajas
 
 #### Desventajas
