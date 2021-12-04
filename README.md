@@ -14,6 +14,8 @@
 
 El **procesamiento de lenguaje natural**, abreviado **NLP** por sus siglas en inglés, es un campo de las ciencias de la computación, de la inteligencia artificial y de la lingüística que estudia las interacciones entre las computadoras y el lenguaje humano. Se ocupa de la formulación e investigación de mecanismos eficaces computacionalmente para la comunicación entre personas y máquinas por medio del lenguaje natural, es decir, de las lenguas del mundo.  Los modelos aplicados se enfocan no solo a la comprensión del lenguaje de por sí, sino a aspectos generales cognitivos humanos y a la organización de la memoria.
 
+Cualquier lengua humana puede ser tratada puede ser procesadas. Lógicamente , limitaciones de interés económico o practico hace que solo las lenguas mas habladas o utilizadas en el mundo digital tangan aplicaciones en uso. Las lenguas humanas pueden expresarse por escrito (texto) , oralmente (voz) y también, mediante signos. Naturalmente, el procesamiento del lenguaje natural esta mas avanzado en el tratamiento de  textos, donde hay muchos mas datos y son mas fáciles de conseguir en formato digital. Los audios aunque también estén el formato digital hay que procesarlos para transcribirlos a letras o caracteres y a partir de ahí tratar los datos.  
+
 
 
 #### Características más comunes
@@ -22,9 +24,12 @@ El **procesamiento de lenguaje natural**, abreviado **NLP** por sus siglas en in
 
 # Dificultades de Procesamiento
 
+Creemos que existen dos problemas principales de los actuales sistemas de reconocimiento de entidades nombradas. El primer problema es la necesidad de sintonizar el sistema para cada nuevo dominio o idioma. Hay una gran caída en la calidad de la salida cuando un sistema diseñado para un dominio se usa para otro. La transición de un idioma a otro es aún más problemática.
+El segundo problema es la falta de conocimiento semántico y externo, que es crucial para que las personas reconozcan los nombres en los textos, especialmente en textos informales como publicaciones en foros de Internet. 
+
 #### Ambigüedad
 
-Las lenguas naturales son inherentemente ambiguas en diferentes niveles:
+Las lenguas naturales son inherente-mente ambiguas en diferentes niveles:
 
 - En el nivel léxico, una misma palabra puede tener varios significados, y la selección del apropiado se debe deducir a partir del contexto oracional o conocimiento básico. Muchas investigaciones en el campo del procesamiento de lenguajes naturales han estudiado métodos de resolver las ambigüedades léxicas mediante diccionarios, gramáticas, bases de conocimiento y correlaciones estadísticas.
 - A nivel referencial, la resolución de anáforas y catáforas implica determinar la entidad lingüística previa o posterior a que hacen referencia.
