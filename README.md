@@ -93,8 +93,6 @@ Ahora es posible definir lo que se cuanta como P, N, FP,FN. Se propusieron múlt
 
 El Reconocimiento de entidades nombradas a menudo se divide, conceptualmente y posiblemente también en su implementación, en dos problemas distintos: detección de nombres, y clasificación de los nombres según el tipo de entidad al que hacen referencia a (persona, organización, ubicación y otro). La primera fase generalmente se reduce a un problema de segmentación: los nombres son una secuencia contigua de tokens, sin solapamiento ni anidamiento, de modo que "Bank of America" es un nombre único, a pesar del hecho de que dentro de este nombre aparezca, la subcadena América que es a su vez un nombre.
 
-
-
 Para evaluar la calidad de un sistema de NER se han definido varias medidas. La exactitud a nivel de token es una posibilidad, pero tiene dos problemas: la mayoría de los tokens en textos de la vida real no son parte de entidades nombradas, así que la exactitud de un sistema que pronostica siempre "no una entidad" es muy alto, generalmente mayor que el 90%; y un error en la delimitación de una entidad nombrada no es debidamente penalizado. Por ejemplo, detectar solo el primer nombre de la persona cuando le sigue su apellido se puntúa con ½ exactitud.
 
 En conferencias académicas como CoNLL, se ha definido una variante del valor-F de la siguiente manera:
@@ -120,6 +118,28 @@ El  alemán comenzó con el CoNLL-2003. En CoNLL-2003, el mejor sistema para el 
 Hay sistemas para el Chino (Fu y Luke 2005), Japones (Sasano y Kurohashi, 2008), Estonio(Tkachenko, 2013), Húngaro (Varga, Simon, 2007), turco (Demir y Ozgur, 2014), lenguas indias(Ekbal y Saha, 2011), Búlgaro (Georgiev, 2009), árabe(Shaalan, 2014). 
 
 Es evidente que el lenguaje tiene un gran impacto en el rendimiento del sistema. La mayor parte de la investigación se realiza en Ingles, que parece ser uno de los idiomas mas fáciles. Todos los lenguajes tienen alguna propiedades especiales, que juegan un papel crucial en el rendimiento. Esas propiedades incluyen el nivel de inflexión y la libertad del orden de las palabras.(Konkol y Konopík, 2014), capitalizacion(Faruqui y Padó, 2010) tokenización (tokenización diferente para entidades en Chino) (Gao et al., 2005), aglutinación (Shaalan, 2014). 
+
+### Multilingual
+
+La tarea NER se definió en MUC-6 (Grishman y Sundheim, 1996). Esta conferencia se centró exclusivamente en el inglés. Las siguientes conferencias otorgaron gradualmente más importancia al procesamiento de varios idiomas. En MUC-7 / MET-2, los sistemas NER presentados procesaban inglés, japonés y chino, pero no era obligatorio evaluar el sistema en todos estos idiomas, de hecho, la mayoría de los sistemas fueron evaluados en solo uno de estos idiomas. (pro, 1998). 
+
+Tanto para CoNLL-2002 (Tjong Kim Sang, 2002) como para CoNLL-2003 (Tjong Kim Sang y De Meulder, 2003), todos los sistemas tuvieron que ser evaluados en un par de idiomas (holandés y español, inglés y alemán). Aunque los sistemas presentados en estas conferencias generalmente se consideran multilingües, tenían diferentes niveles de independencia lingüística. Podría decirse que los sistemas fueron capaces de adaptarse a un nuevo idioma solo hasta cierto punto sin el trabajo de un experto (por ejemplo, se requirió una parte del discurso, nomenclátores).
+
+Actualmente, existen múltiples sistemas de vanguardia, que son (o deberían poder) procesar una amplia gama de idiomas (Lin y Wu, 2009; Konkol et al., 2015; Steinberger et al., 2013) . Estos sistemas evitan herramientas deliberadamente dependientes del lenguaje como lematizadores, etiquetadores POS o etiquetadores de fragmentos por dos razones. Primero, no están disponibles para muchos idiomas. En segundo lugar, estas herramientas no suelen ser multilingües o solo admiten un conjunto limitado de idiomas. Entonces es difícil integrarlos y gestionarlos en un único sistema altamente multilingüe (Steinberger et al., 2013).  
+
+La clave de los sistemas altamente multilingües es su adaptabilidad. Un sistema altamente multilingües necesita poder adaptarse a un nuevo lenguaje fácilmente, sin mucho esfuerzo 
+
+### Dominio 
+
+Otro aspecto de los NER es el dominio de los datos. NER se aplico en una amplia variedad de dominios, incluidos Wikipedia , artículos de noticias , discursos parlamentarios, aplicaciones biomédicas, redes sociales, negocios, etc. Algunos dominios parecen ser mas fáciles que otros dominios, ejemplo Periódico y Redes Sociales. Se ha demostrado que el sistema entrenado en un dominio se desempena significativamente peor en los otros dominios. Caimarita y Altun (2005) han demostrado una brecha mayor al 26% cuando entrenaron un sistema en el corpus CoNLL y lo usaron en textos de Wall Street Journal. Se informó una degradación similar del rendimiento en (Poibeau y Kosseim, 2001) para NER entrenado en el corpus MUC-6 y utilizado para textos mas informales como correos electrónicos. El dominio también evoluciona con el tiempo. El idioma y el estilo de los textos cambian. Aparecen entidades (nuevas empresas, nuevos bancos , oficinas , etc ) y desaparecen (empresas compradas, pensiones, etc). 
+
+El propósito general es crear un sistema de dominio independiente, sistemas que trabajan para todos los dominios similarmente al humano. Actualmente, hay dos enfoques. El primer enfoque, creamos un dominio dependiente y una capa de adaptación. que es responsable de alterar el sistema para otros dominios (Guo, 2009). En el segundo enfoque, se trata directamente de crear sistemas de dominio independiente. El primer paso en este sentido es remplazar características de dominio dependiente. (gazetteers rules, etc) con características mas generales (Faruqui and Pado, 2010) para limitar el trabajo necesario para entrenar el sistema para otro dominio. 
+
+### Esquema de anotación 
+
+El reconocimiento de algunas clases es mucho más difícil que otras clases, p. Ej. si elegimos reconocer los nombres de pila, es más fácil que las ubicaciones, porque la variabilidad de los nombres de pila suele ser menor que la variabilidad de los nombres de las ubicaciones. El número de clases también es un factor. Generalmente, la clasificación es más difícil si el número de clases es alto, porque las clases probablemente estarían juntas (es decir, más difíciles de separar) y se necesitarían más parámetros o reglas. Se necesita cierta cantidad de datos para entrenar a cada clase. Con un gran número de clases, es necesario anotar más datos (en el enfoque de aprendizaje automático) o escribir más reglas (en el enfoque basado en reglas). 
+
+Otro punto de vista es la estructura de las entidades. Las clases de entidad pueden estar simplemente en el mismo nivel o pueden organizarse jerárquicamente, p. Ej. persona es una superclase de actor. Sekine y col. (2002) definieron y extendieron gradualmente una jerarquía compleja, que contiene alrededor de 150 clases. La jerarquía se puede definir de varias formas. Sekine y col. (2002) usa jerarquía semántica (la persona es una superclase de actor), pero también hay ejemplos de jerarquía funcional (el nombre de la persona es superclase para el apellido y el nombre)
 
 ## Propuestas de Solución 
 
