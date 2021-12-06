@@ -55,7 +55,39 @@ En la expresión entidad nombrada, la palabra nombrada restringe la tarea a aque
 
 Las expresiones temporales y algunas expresiones numéricas (dinero, porcentajes, etc.) también pueden ser considerados entidades en el contexto del NER. Mientras algunos casos de estos tipos son ejemplos buenos de designadores rígidos (p. ej., el año 2001), hay también muchos inválidos (p. ej., tomo mis vacaciones en “junio”). En el primer caso, el año *2001* refiere al *2001.º año del calendario gregoriano.* En el segundo caso, el mes de junio puede referir al mes de cualquier año (*junio pasado*, *el próximo junio*, *junio* 2020, etc.). La definición de *entidad nombrada* no es estricta y a menudo tiene que ser explicada en el contexto en qué se está utilizado.
 
+El reconocimento de  entidades nombradas intenta detectar y clasificar correctamente expresiones textuales en un conjunto de clases predefinidas. Las clases pueden variar, pero muy a menudo se utilizan clases como personas, organizaciones o ubicaciones. 
 
+Cada Entidad tiene dos propiedades principales:  *amplitud* y *tipo*. Supongamos que nuestro texto contiene "Banco de Inglaterra". El tipo de entidad es organización y tiene tres palabras Marcar a *Inglaterra* de tipo organización es seguramente incorrecto, así como marcar "Banco de Inglaterra" como país. Marcar a "Inglaterra" como país es cuestionable(en este caso) y la exactitud de esta salida depende de nuestras necesidades. Como se puede apreciar, existen varias definiciones posibles para de la respuesta correcta. Mas adelante se describen métricas de evaluación usadas para el reconocimiento de entidades nombradas junto con múltiples definiciones del resultado deseado.  
+
+**Métrica de Evaluación** 
+
+En cualquier área de la búsqueda de información es importante avaluar y comparar resultados de nuevos métodos. Por tanto, existe la necesidad de utilizar algunas medidas objetivas que cubran bien el propósito de la investigación 
+
+A diferencia de otras tareas de Procesamiento de Lenguaje Natural (Ej Machine Translation) El Reconocimiento de Entidades Nombradas usa conjunto estándar de métricas(aunque el uso puede variar) que es generalmente aceptado. Este conjunto incluye tres metricas que desciben el rendimiento de los sistemas de NER, cada para diferentes aspectos de la tarea. Estas métricas se denominan *precisión*, *recuperación* y $medida-F$ (también puntuación $F$ o puntuación $F_1$)
+
+Vamos a definir esas métricas en una clasificación general de objetos dentro de  dos clases: positivas y negativas. Existen las siguientes 4 clases de resultados de clasificación.
+
+- Positiva(P) - objetos positivos marcados como positivos. 
+- Negativo(N) - objetos negativos marcados como negativo
+- Falso positvo (FP) - objetos negativos marcados como positivos
+- Falso Negativo(FN) -objetos positivos marcados como negativos 
+
+Ahora podemos fácilmente definir *precisión*, *recuperación* y *medida-F* como sigue: 
+$$
+\mbox{presicion} = \frac{P}{P+FP}
+$$
+
+$$
+\mbox{recuperacion} = \frac{P}{P+FN}
+$$
+
+$$
+\mbox{Medida-F} = \frac{2P}{2P+FP+FN}
+$$
+
+*Precisión* es una medida de confianza, que los objetos marcados como positivos son realmente positivos. *Recuperación* es una mediad de confianza, que todos los objetos están marcados. Es obvio que *precisión* y *recuperación* describen diferentes aspectos del resultados. Sin embargo esas medidas están compitiendo. Esto es importante en la evaluación de un clasificador, porque el clasificador de alta memoria (o precisión) puede ser mejor para varias tareas. *Medida-F* es la media armónica entre *precisión* y *recuperación* y representan la perspectiva en general. 
+
+Ahora es posible definir lo que se cuanta como P, N, FP,FN. Se propusieron múltiples definiciones. las siguientes secciones cubren las mas comunes.
 
 ## Características del Problema
 
