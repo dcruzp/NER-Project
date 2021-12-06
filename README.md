@@ -141,6 +141,18 @@ El reconocimiento de algunas clases es mucho más difícil que otras clases, p. 
 
 Otro punto de vista es la estructura de las entidades. Las clases de entidad pueden estar simplemente en el mismo nivel o pueden organizarse jerárquicamente, p. Ej. persona es una superclase de actor. Sekine y col. (2002) definieron y extendieron gradualmente una jerarquía compleja, que contiene alrededor de 150 clases. La jerarquía se puede definir de varias formas. Sekine y col. (2002) usa jerarquía semántica (la persona es una superclase de actor), pero también hay ejemplos de jerarquía funcional (el nombre de la persona es superclase para el apellido y el nombre)
 
+### Corpus 
+
+Para la evaluación de la tarea NER, es necesario crear un corpus con entidades marcadas. Si utilizamos un enfoque de aprendizaje automático supervisado, también necesitamos el corpus para la estimación de parámetros óptimos. Muy a menudo, el corpus es creado por humanos y lo llamamos datos de oro. A veces, el corpus se puede crear automáticamente a partir de recursos ya existentes (Hahm et al., 2014; Nothman et al., 2008). Este enfoque generalmente nos permite crear un corpus mucho más grande, pero el corpus contiene errores. Usamos el término datos de plata para dicho corpus.
+
+El corpus generalmente se divide en partes con diferentes propósitos. La parte de entrenamiento del corpus se utiliza para entrenar los parámetros del sistema. La parte de prueba se utiliza solo para la evaluación final del sistema. Evaluar el sistema en el conjunto de prueba durante su desarrollo es una mala práctica, porque los resultados finales probablemente sean mejores de lo que serían con datos invisibles. La parte restringida o de validación se utiliza para verificar el diseño del sistema durante el desarrollo y también para encontrar los hiperparámetros óptimos del modelo (por ejemplo, tamaño de las ventanas para las características, parámetros para la combinación de modelos).
+
+En el enfoque de *maching* *learning* el tamaño de los datos tiene un gran impacto en los resultados. Un sistema complejo entrenado con muy pocos datos no podrá generalizar y los resultados en datos invisibles pueden ser catastróficos. Este problema se llama sobreajuste. Un sistema menos complejo necesita menos datos, pero es posible que no pueda modelar el problema correctamente. Por este motivo, a menudo se utiliza la validación cruzada. En esta técnica, el corpus (o la parte de formación y validación) se divide en N partes con N>2. En la i-ésima iteración (i = 1,...., N), el sistema se entrena en todas las partes excepto en la i-ésima parte y la i-ésima parte se utiliza para la evaluación. De esta manera, todos los datos se utilizan tanto para la formación como para la evaluación. 
+
+Se han elaborado los corpus más utilizados para las conferencias CoNLL. Se crearon corpus para cuatro idiomas: español, holandés, inglés y alemán. Estos corpora utilizan cuatro clases de entidad PER (nombres de personas), ORG (organizaciones), LOC (ubicaciones) y MISC (varios). Los tamaños de estos corpus son alrededor de 250.000 tokens. 
+
+
+
 ## Propuestas de Solución 
 
 Se han creado sistemas NER empleando técnicas basadas en gramáticas lingüísticas y modelos estadísticos, i.e. aprendizaje de máquina. Los sistema basados en gramáticas y elaborados a manos obtienen generalmente una mejor precisión, pero a expensas de un menor recobrado y meses de trabajo de lingüistas computacionales experimentados. El NER estadístico comúnmente requieren un conjunto de entrenamiento grande de datos anotados manualmente. Se han propuesto métodos semisupervisedos para evitar parte del esfuerzo de anotación.
