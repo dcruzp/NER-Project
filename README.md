@@ -107,7 +107,19 @@ En conferencias académicas como CoNLL, se ha definido una variante del valor-F 
 
 Se han propuesto modelos de evaluación basados en un emparejamiento token-por-token. Tales modelos permiten una evaluación más detallada y hacer una comparación de los sistemas de extracción existentes, teniendo en cuenta también el grado de disparidad en predicciones no exactas.
 
+### Lenguajes
 
+Los resultados muestran que existen grandes diferencias entre los lenguajes, que probablemente se deban a sus propiedades(orden de palabra, morfología, reglas para escribir nombres propios, etc).
+
+La búsqueda se realizo principalmente en Ingles. El mejor sistema en CoNLL-2003 fue creado por Florianet al.(2003). Alcanzo el 88,76% de la medida F. Aunque muchos sistemas tienen muchos resultados en la actualidad, a menudo se les compara con este sistema. Los resultados mas avanzados fueron obtenidos por Lin y Wu (2009) (90,90%), Ratinov y Roth (2009) (90,57%), Turian (2010) (90,36%) y Tkachenko y Simanovsky (2012) (91,02%). 
+
+El Español fue uno de los idiomas, que fueron tratados en la conferencia CoNLL-2002. El mejor sistema para el espannol para este conferencia fue creado por Carreras (2002). Estaba basado en AdaBoost y alcanzo 81.39%. Ferrandez (2006) introdujo el sistema basado en una combinacion de maching learning y un enfoque basado en reglas. El sistema de maching learning se utilizo como entrada para la parte basada en reglas, que tomo las decisiones finales. Para nuestro mejor conocimiento, actualmente sostiene el mejor resultado para el Español con 83.37%. Otro sistema fue presentado por Kozareva (2007) que combina varios métodos de maching learning  usando votacion ponderada. El sistema evita el uso de características morfológicas y sintácticas porque esas características reducen la adaptabilidad del sistema. Su puntuación final en los datos de CoNLL-2002 fue de 78.59%, que seria el tercer lugar en la conferencia original. Konkol (2015) introdujeron un sistema independiente del idioma, que alcanzo un 83,08% en español, peor solo en un 0,29% que el mejor sistema dependiente del idioma. 
+
+El  alemán comenzó con el CoNLL-2003. En CoNLL-2003, el mejor sistema para el alemán (Florian et al., 2003) tenía 72,41%. Faruqui y Padó (2010) presentaron un sistema que superó a los sistemas anteriores con un 78,2%. Su éxito se basó en el uso de similitudes semánticas y morfológicas de palabras. Recientemente, una tarea compartida de GermEval NER (Benikova et al., 2014) presentó una serie de sistemas. Los organizadores del taller anunciaron tres mejores sistemas (Benikova et al., 2014). 
+
+Hay sistemas para el Chino (Fu y Luke 2005), Japones (Sasano y Kurohashi, 2008), Estonio(Tkachenko, 2013), Húngaro (Varga, Simon, 2007), turco (Demir y Ozgur, 2014), lenguas indias(Ekbal y Saha, 2011), Búlgaro (Georgiev, 2009), árabe(Shaalan, 2014). 
+
+Es evidente que el lenguaje tiene un gran impacto en el rendimiento del sistema. La mayor parte de la investigación se realiza en Ingles, que parece ser uno de los idiomas mas fáciles. Todos los lenguajes tienen alguna propiedades especiales, que juegan un papel crucial en el rendimiento. Esas propiedades incluyen el nivel de inflexión y la libertad del orden de las palabras.(Konkol y Konopík, 2014), capitalizacion(Faruqui y Padó, 2010) tokenización (tokenización diferente para entidades en Chino) (Gao et al., 2005), aglutinación (Shaalan, 2014). 
 
 ## Propuestas de Solución 
 
