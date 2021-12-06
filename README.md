@@ -18,14 +18,42 @@ Cualquier lengua humana puede ser tratada puede ser procesadas. Lógicamente , l
 
 
 
-#### Características más comunes
+### Características más comunes
 
-...
+#### Como funciona el Procesamiento del Lenguaje Natural
+
+El NLP permite que las computadoras comprendan el lenguaje natural como lo hacen los humanos. Ya sea que el idioma sea hablado o escrito, el procesamiento del lenguaje natural utiliza inteligencia artificial para tomar información del mundo real, procesarla y darle sentido de una manera que una computadora pueda entender. Así como los seres humanos tienen diferentes sensores, como oídos para oír y ojos para ver, las computadoras tienen programas para leer y micrófonos para recopilar audio. Y así como los humanos tienen un cerebro para procesar esa entrada, las computadoras tienen un programa para procesar sus respectivas entradas. En algún momento del procesamiento, la entrada se convierte en un código que la computadora puede entender. 
+
+Hay dos faces principales para el procesamiento del lengaje natural: el procesamiento de los datos y el desarrollo de algoritmos. 
+
+El preprocesamiento de datos implica preparar y "limpiar" datos de texto para que las máquinas puedan analizarlos. el preprocesamiento pone los datos en una forma viable y resalta las características del texto con las que un algoritmo puede trabajar. Hay varias formas de hacerlo, entre las que se incluyen: 
+
+- **Tokenización** Aquí es cuando el texto se divide en unidades más pequeñas para trabajar. 
+- **Detener la eliminación de palabras**.  Aquí es cuando las palabras comunes se eliminan del texto, por lo que las palabras únicas que ofrecen la mayor cantidad de información sobre el texto permanecen. 
+- **Lematización y derivación.** Aquí es cuando las palabras se reducen a su forma raíz para procesarlas. 
+- **Etiquetado de parte del discurso**.  Esto es cuando las palabras se marcan según la parte del discurso que son, como sustantivos, verbos y adjetivos.
+
+Una vez que los datos han sido preprocesados, se desarrolla un algoritmo para procesarlos. Hay muchos algoritmos de procesamiento de lenguaje natural diferentes, pero se utilizan comúnmente dos tipos principales: 
+
+- **Sistema basado en reglas**. Este sistema utiliza reglas lingüísticas cuidadosamente diseñadas. Este enfoque se utilizó desde el principio en el desarrollo del procesamiento del lenguaje natural y todavía se utiliza.
+-  **Sistema basado en aprendizaje automático**. Los algoritmos de aprendizaje automático utilizan métodos estadísticos. Aprenden a realizar tareas en función de los datos de entrenamiento que reciben y ajustan sus métodos a medida que se procesan más datos. Mediante una combinación de aprendizaje automático, aprendizaje profundo y redes neuronales, los algoritmos de procesamiento del lenguaje natural perfeccionan sus propias reglas mediante el procesamiento y el aprendizaje repetidos.
+
+#### Desafíos del procesamiento del lenguaje Natural
+
+Hay una serie de desafíos en el procesamiento del lenguaje natural y la mayoría de ellos se reducen al hecho de que el lenguaje natural está en constante evolución y siempre es algo ambiguo.
+
+- **Precisión** Las computadoras tradicionalmente requieren que los humanos les "hablen" en un lenguaje de programación que sea preciso, inequívoco y altamente estructurado, o mediante un número limitado de comandos de voz claramente enunciados. El habla humana, sin embargo, no siempre es precisa; a menudo es ambiguo y la estructura lingüística puede depender de muchas variables complejas, incluida la jerga, los dialectos regionales y el contexto social.
+- **Tono de voz e inflexión** El procesamiento del lenguaje natural aún no se ha perfeccionado. Por ejemplo, el análisis semántico todavía puede ser un desafío. Otras dificultades incluyen el hecho de que el uso abstracto del lenguaje suele ser complicado de entender para los programas. Por ejemplo, el procesamiento del lenguaje natural no detecta el sarcasmo fácilmente. Estos temas generalmente requieren comprender las palabras que se usan y su contexto en una conversación. Como otro ejemplo, una oración puede cambiar de significado dependiendo de la palabra o sílaba en la que el hablante pone énfasis. Los algoritmos de PNL pueden pasar por alto los cambios de tono sutiles, pero importantes, en la voz de una persona al realizar el reconocimiento de voz. El tono y la inflexión del habla también pueden variar entre diferentes acentos, lo que puede ser difícil de analizar para un algoritmo. 
+- **Evolución del uso del lenguaje** El procesamiento del lenguaje natural también se ve desafiado por el hecho de que el lenguaje, y la forma en que la gente lo usa, cambia continuamente. Aunque existen reglas para el lenguaje, ninguna está escrita en piedra y están sujetas a cambios con el tiempo. Las estrictas reglas computacionales que funcionan ahora pueden volverse obsoletas a medida que las características del lenguaje del mundo real cambian con el tiempo
 
 # Dificultades de Procesamiento
 
 Creemos que existen dos problemas principales de los actuales sistemas de reconocimiento de entidades nombradas. El primer problema es la necesidad de sintonizar el sistema para cada nuevo dominio o idioma. Hay una gran caída en la calidad de la salida cuando un sistema diseñado para un dominio se usa para otro. La transición de un idioma a otro es aún más problemática.
 El segundo problema es la falta de conocimiento semántico y externo, que es crucial para que las personas reconozcan los nombres en los textos, especialmente en textos informales como publicaciones en foros de Internet. 
+
+
+
+
 
 #### Ambigüedad
 
