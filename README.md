@@ -95,8 +95,18 @@ Los cuatro principales enfoques aplicados en NER son:
 
 ## Ventajas y Desventajas
 
+#### Ventajas 
+
+* Es muy útil en la recomendación de contenido, automatizando el proceso de recomendación para los medios de información, el uso de NER para la recomendación de determinados artículos similares  es un enfoque muy usado.
+* Aumenta la eficiencia de la clasificación de contenido en múltiples documentos, basado en el conocimiento que tenemos de las entidades asociadas a un documento en específico. 
+* Es útil en la creación de grafos de identidad a partir de un corpus de documentos. Los nodos son las entidades reconocidas, las aristas pueden ser pares de entidades que se encuentran lo suficientemente cerca con la frecuencia suficiente. Este grafo permite la creación de ontologías ricas en dominios específicos.
+ 
 #### Desventajas
 
 * Las investigaciones realizadas indican que incluso los sistemas NER más avanzadas son frágiles, dado que los sistemas NER desarrollados para un dominio no suelen comportarse bien en otros dominios.
-*  La puesta a punto de un sistema NER para un nuevo dominio conlleva un esfuerzo considerable.
-* 
+*  La puesta a punto de un sistema NER para un nuevo dominio conlleva un esfuerzo considerable para modelos basados en reglas y estadisticos.
+ 
+
+## Conclusiones
+  El reconocimiento de entidad nombrada se ha desarrollado continuamente durante más de 15 años. Existen más de 20 idiomas y más de 200 tipos de entidades. La mayoría de las investigaciones están interesadas en información específica sobre tipos de temas como artículos de noticias, información de páginas web, etc. El reconocimiento y la clasificación de estas es una tarea principal en las áreas del Procesamiento del Lenguaje Natural y la Extracción de la Información. Aquí presentamos las características fundamentales así como los enfoques principales del reconocimiento de entidades nombradas, trabajo que nos permitió interiorizar en este nuevo campo de tanta utilidad en la actualidad.
+  
