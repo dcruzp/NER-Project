@@ -1,0 +1,253 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+\documentclass{llncs}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+%
+\begin{document}
+	%
+	\frontmatter          % for the preliminaries
+	%
+	\pagestyle{headings}  % switches on printing of running heads
+	\addtocmark{Hamiltonian Mechanics} % additional mark in the TOC
+	%
+	\chapter*{Preface}
+	%
+	This textbook is intended for use by students of physics, physical
+	chemistry, and theoretical chemistry. The reader is presumed to have a
+	basic knowledge of atomic and quantum physics at the level provided, for
+	example, by the first few chapters in our book {\it The Physics of Atoms
+		and Quanta}. The student of physics will find here material which should
+	be included in the basic education of every physicist. This book should
+	furthermore allow students to acquire an appreciation of the breadth and
+	variety within the field of molecular physics and its future as a
+	fascinating area of research.
+	
+	For the student of chemistry, the concepts introduced in this book will
+	provide a theoretical framework for that entire field of study. With the
+	help of these concepts, it is at least in principle possible to reduce
+	the enormous body of empirical chemical knowledge to a few basic
+	principles: those of quantum mechanics. In addition, modern physical
+	methods whose fundamentals are introduced here are becoming increasingly
+	important in chemistry and now represent indispensable tools for the
+	chemist. As examples, we might mention the structural analysis of
+	complex organic compounds, spectroscopic investigation of very rapid
+	reaction processes or, as a practical application, the remote detection
+	of pollutants in the air.
+	
+	\vspace{1cm}
+	\begin{flushright}\noindent
+		April 1995\hfill Walter Olthoff\\
+		Program Chair\\
+		ECOOP'95
+	\end{flushright}
+	%
+	\chapter*{Organization}
+	ECOOP'95 is organized by the department of Computer Science, Univeristy
+	of \AA rhus and AITO (association Internationa pour les Technologie
+	Object) in cooperation with ACM/SIGPLAN.
+	%
+	\section*{Executive Commitee}
+	\begin{tabular}{@{}p{5cm}@{}p{7.2cm}@{}}
+		Conference Chair:&Ole Lehrmann Madsen (\AA rhus University, DK)\\
+		Program Chair:   &Walter Olthoff (DFKI GmbH, Germany)\\
+		Organizing Chair:&J\o rgen Lindskov Knudsen (\AA rhus University, DK)\\
+		Tutorials:&Birger M\o ller-Pedersen\hfil\break
+		(Norwegian Computing Center, Norway)\\
+		Workshops:&Eric Jul (University of Kopenhagen, Denmark)\\
+		Panels:&Boris Magnusson (Lund University, Sweden)\\
+		Exhibition:&Elmer Sandvad (\AA rhus University, DK)\\
+		Demonstrations:&Kurt N\o rdmark (\AA rhus University, DK)
+	\end{tabular}
+	%
+	\section*{Program Commitee}
+	\begin{tabular}{@{}p{5cm}@{}p{7.2cm}@{}}
+		Conference Chair:&Ole Lehrmann Madsen (\AA rhus University, DK)\\
+		Program Chair:   &Walter Olthoff (DFKI GmbH, Germany)\\
+		Organizing Chair:&J\o rgen Lindskov Knudsen (\AA rhus University, DK)\\
+		Tutorials:&Birger M\o ller-Pedersen\hfil\break
+		(Norwegian Computing Center, Norway)\\
+		Workshops:&Eric Jul (University of Kopenhagen, Denmark)\\
+		Panels:&Boris Magnusson (Lund University, Sweden)\\
+		Exhibition:&Elmer Sandvad (\AA rhus University, DK)\\
+		Demonstrations:&Kurt N\o rdmark (\AA rhus University, DK)
+	\end{tabular}
+	%
+	\begin{multicols}{3}[\section*{Referees}]
+		V.~Andreev\\
+		B\"arwolff\\
+		E.~Barrelet\\
+		H.P.~Beck\\
+		G.~Bernardi\\
+		E.~Binder\\
+		P.C.~Bosetti\\
+		Braunschweig\\
+		F.W.~B\"usser\\
+		T.~Carli\\
+		A.B.~Clegg\\
+		G.~Cozzika\\
+		S.~Dagoret\\
+		Del~Buono\\
+		P.~Dingus\\
+		H.~Duhm\\
+		J.~Ebert\\
+		S.~Eichenberger\\
+		R.J.~Ellison\\
+		Feltesse\\
+		W.~Flauger\\
+		A.~Fomenko\\
+		G.~Franke\\
+		J.~Garvey\\
+		M.~Gennis\\
+		L.~Goerlich\\
+		P.~Goritchev\\
+		H.~Greif\\
+		E.M.~Hanlon\\
+		R.~Haydar\\
+		R.C.W.~Henderso\\
+		P.~Hill\\
+		H.~Hufnagel\\
+		A.~Jacholkowska\\
+		Johannsen\\
+		S.~Kasarian\\
+		I.R.~Kenyon\\
+		C.~Kleinwort\\
+		T.~K\"ohler\\
+		S.D.~Kolya\\
+		P.~Kostka\\
+		U.~Kr\"uger\\
+		J.~Kurzh\"ofer\\
+		M.P.J.~Landon\\
+		A.~Lebedev\\
+		Ch.~Ley\\
+		F.~Linsel\\
+		H.~Lohmand\\
+		Martin\\
+		S.~Masson\\
+		K.~Meier\\
+		C.A.~Meyer\\
+		S.~Mikocki\\
+		J.V.~Morris\\
+		B.~Naroska\\
+		Nguyen\\
+		U.~Obrock\\
+		G.D.~Patel\\
+		Ch.~Pichler\\
+		S.~Prell\\
+		F.~Raupach\\
+		V.~Riech\\
+		P.~Robmann\\
+		N.~Sahlmann\\
+		P.~Schleper\\
+		Sch\"oning\\
+		B.~Schwab\\
+		A.~Semenov\\
+		G.~Siegmon\\
+		J.R.~Smith\\
+		M.~Steenbock\\
+		U.~Straumann\\
+		C.~Thiebaux\\
+		P.~Van~Esch\\
+		from Yerevan Ph\\
+		L.R.~West\\
+		G.-G.~Winter\\
+		T.P.~Yiou\\
+		M.~Zimmer\end{multicols}
+	%
+	\section*{Sponsoring Institutions}
+	%
+	Bernauer-Budiman Inc., Reading, Mass.\\
+	The Hofmann-International Company, San Louis Obispo, Cal.\\
+	Kramer Industries, Heidelberg, Germany
+	%
+	\tableofcontents
+	%
+	\mainmatter              % start of the contributions
+	%
+	\title{Reconociemiento de Entidades Nombradas}
+	%
+	\titlerunning{Hamiltonian Mechanics}  % abbreviated title (for running head)
+	%                                     also used for the TOC unless
+	%                                     \toctitle is used
+	%
+	\author{Daniel de la Cruz Prieto, Mauricio Mahmud Sánchez}
+	%
+	\authorrunning{Ivar Ekeland et al.} % abbreviated author list (for running head)
+
+	%
+	\institute{Universidad de la Habana, La Habana, Cuba}
+	
+	\maketitle              % typeset the title of the contribution
+	
+	\begin{abstract}
+		En este documento vamos a estar tratando los principales caracteristicas que definen el Procesamiento del Lenguaje Natural, asi como las especificidades de cada idioma. Las dificultades que se afrontan al hacer el procesamiento del lenguaje natural. En particular se va a hablar del probema del Reconociemto de Entidades Nombradas (Named Entity recognition). Se define el problema y se tocan aspectos de sus carateristicas mas importantes, asi como una propuesta de solucion y ventajas y desventajas del reconocimiento de entidades nombradas.   
+		
+		
+		\keywords{NER Named Entity Recognition, NLP Natural Language Proccesing}
+	\end{abstract}
+	%
+	
+	\section{Caracteristicas del Procesamiento del Lenguaje Natural}
+	%
+	
+	El \textbf{procesamiento de lenguaje natural}, abreviado \textbf{NLP}por sus siglas en inglés, es un campo de las ciencias de la computación, de la inteligencia artificial y de la lingüística que estudia las interacciones entre las computadoras y el lenguaje humano. Se ocupa de la formulación e investigación de mecanismos eficaces computacionalmente para la comunicación entre personas y máquinas por medio del lenguaje natural, es decir, de las lenguas del mundo.  Los modelos aplicados se enfocan no solo a la comprensión del lenguaje de por sí, sino a aspectos generales cognitivos humanos y a la organización de la memoria.
+	
+	Cualquier lengua humana puede ser tratada puede ser procesadas. Lógicamente , limitaciones de interés económico o practico hace que solo las lenguas mas habladas o utilizadas en el mundo digital tangan aplicaciones en uso. Las lenguas humanas pueden expresarse por escrito (texto) , oralmente (voz) y también, mediante signos. Naturalmente, el procesamiento del lenguaje natural esta mas avanzado en el tratamiento de  textos, donde hay muchos mas datos y son mas fáciles de conseguir en formato digital. Los audios aunque también estén el formato digital hay que procesarlos para transcribirlos a letras o caracteres y a partir de ahí tratar los datos.  
+	
+	%
+	\subsection{¿Como funciona el procesmiento del Lenguaje Natural?} 
+	%
+	El NLP permite que las computadoras comprendan el lenguaje natural como lo hacen los humanos. Ya sea que el idioma sea hablado o escrito, el procesamiento del lenguaje natural utiliza inteligencia artificial para tomar información del mundo real, procesarla y darle sentido de una manera que una computadora pueda entender. Así como los seres humanos tienen diferentes sensores, como oídos para oír y ojos para ver, las computadoras tienen programas para leer y micrófonos para recopilar audio. Y así como los humanos tienen un cerebro para procesar esa entrada, las computadoras tienen un programa para procesar sus respectivas entradas. En algún momento del procesamiento, la entrada se convierte en un código que la computadora puede entender. 
+	
+	Hay dos faces principales para el procesamiento del lenguaje natural: el procesamiento de los datos y el desarrollo de algoritmos. 
+	
+	El preprocesamiento de datos implica preparar y limpiar datos de texto para que las máquinas puedan analizarlos. el preprocesamiento pone los datos en una forma viable y resalta las características del texto con las que un algoritmo puede trabajar. Hay varias formas de hacerlo, entre las que se incluyen: 
+	\begin{itemize}
+		\item \textbf{Tokenización } Aquí es cuando el texto se divide en unidades más pequeñas para trabajar. 
+		\item \textbf{Detener la eliminación de palabras}.  Aquí es cuando las palabras comunes se eliminan del texto, por lo que las palabras únicas que ofrecen la mayor cantidad de información sobre el texto permanecen. 
+		\item \textbf{Lematización y derivación} Aquí es cuando las palabras se reducen a su forma raíz para procesarlas. 
+		\item \textbf{Etiquetado de parte del discurso}.  Esto es cuando las palabras se marcan según la parte del discurso que son, como sustantivos, verbos y adjetivos.
+	\end{itemize}
+	
+	Una vez que los datos han sido preprocesados, se desarrolla un algoritmo para procesarlos. Hay muchos algoritmos de procesamiento de lenguaje natural diferentes, pero se utilizan comúnmente dos tipos principales: 
+	
+	\begin{itemize}
+		\item \textbf{Sistema basado en reglas} Este sistema utiliza reglas lingüísticas cuidadosamente diseñadas. Este enfoque se utilizó desde el principio en el desarrollo del procesamiento del lenguaje natural y todavía se utiliza.
+		\item \textbf{Sistema basado en aprendizaje automatico}  Los algoritmos de aprendizaje automático utilizan métodos estadísticos. Aprenden a realizar tareas en función de los datos de entrenamiento que reciben y ajustan sus métodos a medida que se procesan más datos. Mediante una combinación de aprendizaje automático, aprendizaje profundo y redes neuronales, los algoritmos de procesamiento del lenguaje natural perfeccionan sus propias reglas mediante el procesamiento y el aprendizaje repetidos.
+	\end{itemize}
+	
+	\subsection{Desafíos del procesamiento del Lenguaje Natural}
+	
+	Hay una serie de desafíos en el procesamiento del lenguaje natural y la mayoría de ellos se reducen al hecho de que el lenguaje natural está en constante evolución y siempre es algo ambiguo.
+	
+	\begin{itemize}
+		
+		\item \textbf {Precisi\'on} Las computadoras tradicionalmente requieren que los humanos les "hablen" en un lenguaje de programación que sea preciso, inequívoco y altamente estructurado, o mediante un número limitado de comandos de voz claramente enunciados. El habla humana, sin embargo, no siempre es precisa; a menudo es ambiguo y la estructura lingüística puede depender de muchas variables complejas, incluida la jerga, los dialectos regionales y el contexto social.
+		
+		\item \textbf{Tono de voz e inflexi\'on} El procesamiento del lenguaje natural aún no se ha perfeccionado. Por ejemplo, el análisis semántico todavía puede ser un desafío. Otras dificultades incluyen el hecho de que el uso abstracto del lenguaje suele ser complicado de entender para los programas. Por ejemplo, el procesamiento del lenguaje natural no detecta el sarcasmo fácilmente. Estos temas generalmente requieren comprender las palabras que se usan y su contexto en una conversación. Como otro ejemplo, una oración puede cambiar de significado dependiendo de la palabra o sílaba en la que el hablante pone énfasis. Los algoritmos de PNL pueden pasar por alto los cambios de tono sutiles, pero importantes, en la voz de una persona al realizar el reconocimiento de voz. El tono y la inflexión del habla también pueden variar entre diferentes acentos, lo que puede ser difícil de analizar para un algoritmo. 
+		
+		\item \textbf{Evoluci\'on del uso del Lenguaje} El procesamiento del lenguaje natural también se ve desafiado por el hecho de que el lenguaje, y la forma en que la gente lo usa, cambia continuamente. Aunque existen reglas para el lenguaje, ninguna está escrita en piedra y están sujetas a cambios con el tiempo. Las estrictas reglas computacionales que funcionan ahora pueden volverse obsoletas a medida que las características del lenguaje del mundo real cambian con el tiempo
+	\end{itemize}
+	
+	\section{Reconocimiento de Entidades Nombradas} 
+	
+	\subsection{Definici\'on NER}
+	El Reconocimiento de entidades nombradas (NER por sus siglas en inglés) (también conocido como extracción de entidades) es una tarea de extracción de información que busca localizar y clasificar en categorías predefinidas, como personas, organizaciones, lugares, expresiones de tiempo y cantidades, las entidades nombradas encontradas en un texto.
+	
+	En la expresión entidad nombrada, la palabra nombrada restringe la tarea a aquellas entidades para las cuales existe uno o más de un designador rígido (un designador rígido es una expresión que designa o refiera una misma entidad en todos los mundos posibles en los que esa entidad existe, y no designa nada en aquellos mundos en los que no existe). Por ejemplo, la compañía automotriz creada por Henry Ford en 1903 está relacionada con los designadores *Ford* o *Ford Motor Company*. Los designadores rígidos incluyen tanto nombres propios como términos para ciertas especies biológicas y sustancias.
+	
+	Las expresiones temporales y algunas expresiones numéricas (dinero, porcentajes, etc.) también pueden ser considerados entidades en el contexto del NER. Mientras algunos casos de estos tipos son ejemplos buenos de designadores rígidos (p. ej., el año 2001), hay también muchos inválidos (p. ej., tomo mis vacaciones en “junio”). En el primer caso, el año *2001* refiere al *2001.º año del calendario gregoriano.* En el segundo caso, el mes de junio puede referir al mes de cualquier año (*junio pasado*, *el próximo junio*, *junio* 2020, etc.). La definición de *entidad nombrada* no es estricta y a menudo tiene que ser explicada en el contexto en qué se está utilizado.
+	
+	El reconocimento de  entidades nombradas intenta detectar y clasificar correctamente expresiones textuales en un conjunto de clases predefinidas. Las clases pueden variar, pero muy a menudo se utilizan clases como personas, organizaciones o ubicaciones. 
+	
+	Cada Entidad tiene dos propiedades principales:  *amplitud* y *tipo*. Supongamos que nuestro texto contiene "Banco de Inglaterra". El tipo de entidad es organización y tiene tres palabras Marcar a *Inglaterra* de tipo organización es seguramente incorrecto, así como marcar "Banco de Inglaterra" como país. Marcar a "Inglaterra" como país es cuestionable(en este caso) y la exactitud de esta salida depende de nuestras necesidades. Como se puede apreciar, existen varias definiciones posibles para de la respuesta correcta. Mas adelante se describen métricas de evaluación usadas para el reconocimiento de entidades nombradas junto con múltiples definiciones del resultado deseado.  
+	
+	\subsubsection{Metrica de Evaluacion}
+	En cualquier área de la búsqueda de información es importante avaluar y comparar resultados de nuevos métodos. Por tanto, existe la necesidad de utilizar algunas medidas objetivas que cubran bien el propósito de la investigación 
+	
+	A diferencia de otras tareas de Procesamiento de Lenguaje Natural (Ej Machine Translation) El Reconocimiento de Entidades Nombradas usa conjunto estándar de métricas(aunque el uso puede variar) que es generalmente aceptado. Este conjunto incluye tres metricas que desciben el rendimiento de los sistemas de NER, cada para diferentes aspectos de la tarea. Estas métricas se denominan *precisión*, *recuperación* y $medida-F$ (también puntuación $F$ o puntuación $F_1$)
+	
+\end{document}

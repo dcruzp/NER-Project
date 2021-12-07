@@ -24,9 +24,9 @@ Cualquier lengua humana puede ser tratada puede ser procesadas. Lógicamente , l
 
 El NLP permite que las computadoras comprendan el lenguaje natural como lo hacen los humanos. Ya sea que el idioma sea hablado o escrito, el procesamiento del lenguaje natural utiliza inteligencia artificial para tomar información del mundo real, procesarla y darle sentido de una manera que una computadora pueda entender. Así como los seres humanos tienen diferentes sensores, como oídos para oír y ojos para ver, las computadoras tienen programas para leer y micrófonos para recopilar audio. Y así como los humanos tienen un cerebro para procesar esa entrada, las computadoras tienen un programa para procesar sus respectivas entradas. En algún momento del procesamiento, la entrada se convierte en un código que la computadora puede entender. 
 
-Hay dos faces principales para el procesamiento del lengaje natural: el procesamiento de los datos y el desarrollo de algoritmos. 
+Hay dos faces principales para el procesamiento del lenguaje natural: el procesamiento de los datos y el desarrollo de algoritmos. 
 
-El preprocesamiento de datos implica preparar y "limpiar" datos de texto para que las máquinas puedan analizarlos. el preprocesamiento pone los datos en una forma viable y resalta las características del texto con las que un algoritmo puede trabajar. Hay varias formas de hacerlo, entre las que se incluyen: 
+El preprocesamiento de datos implica preparar y limpiar datos de texto para que las máquinas puedan analizarlos. el preprocesamiento pone los datos en una forma viable y resalta las características del texto con las que un algoritmo puede trabajar. Hay varias formas de hacerlo, entre las que se incluyen: 
 
 - **Tokenización** Aquí es cuando el texto se divide en unidades más pequeñas para trabajar. 
 - **Detener la eliminación de palabras**.  Aquí es cuando las palabras comunes se eliminan del texto, por lo que las palabras únicas que ofrecen la mayor cantidad de información sobre el texto permanecen. 
@@ -50,10 +50,6 @@ Hay una serie de desafíos en el procesamiento del lenguaje natural y la mayorí
 
 Creemos que existen dos problemas principales de los actuales sistemas de reconocimiento de entidades nombradas. El primer problema es la necesidad de sintonizar el sistema para cada nuevo dominio o idioma. Hay una gran caída en la calidad de la salida cuando un sistema diseñado para un dominio se usa para otro. La transición de un idioma a otro es aún más problemática.
 El segundo problema es la falta de conocimiento semántico y externo, que es crucial para que las personas reconozcan los nombres en los textos, especialmente en textos informales como publicaciones en foros de Internet. 
-
-
-
-
 
 #### Ambigüedad
 
